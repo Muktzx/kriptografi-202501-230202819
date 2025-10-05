@@ -1,6 +1,7 @@
 # Laporan Praktikum Kriptografi
 Minggu ke-: 1  
 Topik: Sejarah Kriptografi & Prinsip CIA 
+
 Nama: Mukti Ali Raja  
 NIM: 230202819  
 Kelas: 5IKRA 
