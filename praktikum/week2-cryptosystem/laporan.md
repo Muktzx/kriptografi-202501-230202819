@@ -1,20 +1,24 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 2
+Topik: Cyptosystem 
+Nama: Mukti Ali raja  
+NIM: 230202819  
+Kelas: 5IKRA  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+Memahami konsep dasar sistem kriptografi klasik menggunakan Caesar Cipher.
 
+Mampu mengimplementasikan proses enkripsi dan dekripsi menggunakan bahasa Python.
+
+Mengetahui perbedaan hasil antara teks asli (plaintext) dan teks terenkripsi (ciphertext).
 ---
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
+Kriptografi adalah ilmu yang mempelajari teknik untuk mengamankan informasi agar tidak mudah dibaca oleh pihak yang tidak berwenang. Salah satu metode klasik yang paling sederhana adalah Caesar Cipher, yaitu metode substitusi huruf di mana setiap huruf digeser sejauh k posisi dalam alfabet.
+
+Misalnya, jika k = 3, maka huruf A → D, B → E, dan seterusnya. Proses mengubah plaintext menjadi ciphertext disebut enkripsi, sedangkan mengubah kembali ciphertext menjadi plaintext disebut dekripsi.
 
 ---
 
