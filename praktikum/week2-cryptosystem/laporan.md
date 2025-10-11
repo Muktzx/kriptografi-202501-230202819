@@ -40,44 +40,78 @@ Contoh format:
 ---
 
 ## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
+# file: praktikum/week2-cryptosystem/src/simple_crypto.py
 
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
-)
+def encrypt(plaintext, key):
+    result = ""
+    for char in plaintext:
+        if char.isalpha():
+            # Geser huruf (A–Z / a–z)
+            shift = 65 if char.isupper() else 97
+            result += chr((ord(char) - shift + key) % 26 + shift)
+        elif char.isdigit():
+            # Geser angka (0–9)
+            result += chr((ord(char) - 48 + key) % 10 + 48)
+        else:
+            # Karakter lain (spasi, tanda baca, dll) tidak diubah
+            result += char
+    return result
+
+
+def decrypt(ciphertext, key):
+    result = ""
+    for char in ciphertext:
+        if char.isalpha():
+            shift = 65 if char.isupper() else 97
+            result += chr((ord(char) - shift - key) % 26 + shift)
+        elif char.isdigit():
+            result += chr((ord(char) - 48 - key) % 10 + 48)
+        else:
+            result += char
+    return result
+
+
+if __name__ == "__main__":
+    message = "230202819 MuktiAliRaja"
+    key = 5
+
+    enc = encrypt(message, key)
+    dec = decrypt(enc, key)
+
+    print("Plaintext :", message)
+    print("Ciphertext:", enc)
+    print("Decrypted :", dec)
+
 
 ---
 
 ## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
+Program berhasil melakukan enkripsi pada huruf dan angka.
 
-Hasil eksekusi program Caesar Cipher:
+Huruf digeser 5 posisi dalam alfabet (mod 26).
 
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
+Angka digeser 5 posisi dalam 0–9 (mod 10).
+Proses dekripsi membalikkan hasil enkripsi dengan kunci yang sama, menunjukkan sistem ini termasuk kriptografi simetris.
+Tidak ditemukan error selama eksekusi program.
 
 ---
 
 ## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
----
+Pertanyaan 1: Sebutkan komponen utama dalam sebuah kriptosistem.
+ Jawaban: Plaintext, Ciphertext, Algoritma Enkripsi/Dekripsi, dan Kunci.
+
+Pertanyaan 2: Apa kelebihan dan kelemahan sistem simetris dibandingkan asimetris?
+ Jawaban:
+
+Kelebihan: Proses lebih cepat dan efisien.
+
+Kelemahan: Distribusi kunci rawan bocor karena kunci yang sama digunakan di kedua sisi.
+
+Pertanyaan 3: Mengapa distribusi kunci menjadi masalah utama dalam kriptografi simetris?
+Jawaban: Karena kunci harus dikirim ke pihak lain dengan aman. Jika bocor, maka pesan bisa dengan mudah didekripsi oleh pihak ketiga.
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
-
----
+Praktikum ini menunjukkan bagaimana proses enkripsi dan dekripsi dilakukan menggunakan metode sederhana (Caesar Cipher yang dimodifikasi). Sistem ini menggunakan satu kunci yang sama, termasuk jenis kriptografi simetris. Hasil uji menunjukkan bahwa program dapat mengenkripsi huruf dan angka dengan benar.
 
 ## 9. Daftar Pustaka
 (Cantumkan referensi yang digunakan.  
