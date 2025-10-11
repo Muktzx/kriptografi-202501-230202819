@@ -61,12 +61,29 @@ Contoh format:
 Gunakan blok kode:
 
 ```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
-)
+def enkripsi_caesar(text, shift):
+    hasil = ""
+    for char in text:
+        if char.isalpha(): 
+            base = ord('A') if char.isupper() else ord('a')
+            hasil += chr((ord(char) - base + shift) % 26 + base)
+        else:
+            hasil += char 
+    return hasil
 
+def dekripsi_caesar(text, shift):
+    return enkripsi_caesar(text, -shift)
+
+if __name__ == "__main__":
+    print("=== Program Caesar Cipher ===")
+    pesan = input("Masukkan teks: ")
+    kunci = int(input("Masukkan nilai pergeseran (shift): "))
+
+    terenkripsi = enkripsi_caesar(pesan, kunci)
+    print(f"\nHasil Enkripsi : {terenkripsi}")
+
+    terdekripsi = dekripsi_caesar(terenkripsi, kunci)
+    print(f"Hasil Dekripsi : {terdekripsi}")
 ---
 
 ## 6. Hasil dan Pembahasan
