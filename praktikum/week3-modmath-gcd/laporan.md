@@ -1,20 +1,27 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 3
+Topik: Modular Math (Aritmetika Modular, GCD, Bilangan Prima, dan Logaritma Diskrit)  
+Nama: Mukti Ali Raja  
+NIM: 230202819  
+Kelas: 5IKRA  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+Menyelesaikan operasi aritmetika modular (penjumlahan, pengurangan, perkalian, dan eksponensiasi).
+Menentukan bilangan prima dan menghitung GCD (Greatest Common Divisor) menggunakan algoritma Euclidean.
+Mengimplementasikan Extended Euclidean Algorithm untuk mencari invers modular.
+Menerapkan logaritma diskrit sederhana sebagai simulasi konsep dasar dalam kriptografi modern.
 
 ---
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
+Aritmetika modular merupakan cabang matematika yang berhubungan dengan operasi aritmetika dalam sistem bilangan yang berulang (modulus). Dalam sistem ini, dua bilangan dikatakan kongruen jika memiliki sisa pembagian yang sama terhadap suatu bilangan modulus 𝑛, Operasi ini menjadi dasar dari banyak algoritma kriptografi modern seperti RSA, Diffie-Hellman, dan ECC.
+
+Greatest Common Divisor (GCD) adalah bilangan bulat terbesar yang dapat membagi dua bilangan tanpa sisa. GCD dapat dihitung dengan algoritma Euclidean, yang bekerja secara efisien melalui proses pembagian berulang. Versi lanjutannya, yaitu Extended Euclidean Algorithm, digunakan untuk mencari invers modular, yang sangat penting dalam kriptografi kunci publik.
+
+Sementara itu, logaritma diskrit adalah permasalahan mencari nilai 𝑥 pada persamaan 𝑎𝑥≡𝑏(mod𝑛)
+Permasalahan ini sangat sulit diselesaikan ketika modulus 𝑛, sangat besar, dan karena itulah menjadi dasar keamanan berbagai sistem kriptografi modern seperti Diffie–Hellman Key Exchange.
 
 ---
 
