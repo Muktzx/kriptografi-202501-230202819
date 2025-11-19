@@ -162,5 +162,4 @@ commit abc12345
 Author: Mukti Ali Raja <muktialir2207@gmail.com>
 Date:   2025-09-20
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
 ```
