@@ -1,5 +1,5 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
+Minggu ke-: 13
 Topik: TinyChain – Proof of Work (PoW)  
 Nama: Mukti Ali Raja
 NIM: 230202819 
