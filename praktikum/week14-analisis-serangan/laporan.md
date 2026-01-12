@@ -1,6 +1,6 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
+Minggu ke-: 14
+Topik: Analisis Serangan Kriptografi pada Sistem Nyata  
 Nama: Mukti Ali Raja  
 NIM: 230202819 
 Kelas: 5IKRA 
